@@ -1,6 +1,6 @@
-import ProductItem from './ProductItem';
-import '../css/BestProduct.css';
-import { getProductList } from '../api';
+import ProductItem from './ProductItem.js';
+import styles from './BestProduct.module.css';
+import { getProductList } from '../api.js';
 import { useCallback, useEffect, useState } from 'react';
 
 function getPageSize() {
@@ -55,13 +55,13 @@ export default function BestProduct() {
   }, []);
 
   return (
-    <div className='bestItemSection'>
-      <h1 className='title'>베스트 상품</h1>
-      <div className='bestItems'>
+    <div className={styles.bestItemSection}>
+      <h1 className={styles.title}>베스트 상품</h1>
+      <div className={styles.bestItems}>
         {bestItems.map((item) => {
           return (
             <li key={item.id}>
-              <ProductItem item={item} classNames="BestProduct" />
+              <ProductItem item={item} classNames='BestProduct' />
             </li>
           )
         })}

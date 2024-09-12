@@ -1,5 +1,5 @@
 
-header {
+.navHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,9 +41,22 @@ header {
 
 .user p {
   color: #4B5563;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   line-height: 2.6rem;
+}
+
+.loginButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color-100);
+  color: var(--background-color-white);
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  padding: 1.15rem 2.3rem;
+  line-height: 1.909rem;
 }
 
 @media (min-width: 744px) and (max-width: 1199px) {
@@ -64,10 +77,6 @@ header {
 
   .logoAndMenu {
     gap: 0.8rem;
-  }
-
-  #logo {
-    content: url('../image/logoText.png');
   }
 
   .navMenu {

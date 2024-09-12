@@ -5,7 +5,8 @@
   margin: 1.9rem 0 14rem 0;
 }
 
-button {
+.paginationWrapper button,
+.pageBtns button {
   width: 4rem;
   height: 4rem;
   font-weight: 600;

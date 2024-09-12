@@ -1,9 +1,9 @@
-import ProductItem from "./ProductItem";
-import '../css/SalesProduct.css'
-import SalesProductTitle from "./SalesProductTitle";
+import ProductItem from "./ProductItem.js";
+import styles from './SalesProduct.module.css'
+import SalesProductTitle from "./SalesProductTitle.js";
 import { useCallback, useEffect, useState } from 'react';
-import { getProductList } from '../api';
-import Pagination from "./Pagination";
+import { getProductList } from '../api.js';
+import Pagination from "./Pagination.js";
 
 function getPageSize() {
   const width = window.innerWidth;
@@ -61,13 +61,13 @@ export default function SalesProduct() {
   }, [currentPage, pageSize, sortOrder, searchText, handleLoadSalesItem]);
   
   return (
-    <div className='salesItemSection'>
+    <div className={styles.salesItemSection}>
       <SalesProductTitle 
         onSearchChange={handleSearch} 
         onSortOrderChange={handleSortOrderChange} 
         isMobile={isMobile}
       />
-      <div className='salesItems'>
+      <div className={styles.salesItems}>
         {salesItems.map((item) => {
           return (
             <li key={item.id}>
