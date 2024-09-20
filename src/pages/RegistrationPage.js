@@ -34,8 +34,8 @@ export default function RegistrationPage() {
     try {
       const product = { ...values, tags };
       const response = await createProduct(product);
-
-      const productID = response.id;
+      console.log(response._id);
+      const productID = response._id;
       if (productID) {
         navigate(`/items/${productID}`);
       } else {
